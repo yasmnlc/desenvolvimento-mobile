@@ -13,7 +13,7 @@ import com.example.investidorapp.MainActivity
 import com.example.investidorapp.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import java.util.jar.Manifest
+import android.Manifest
 
 class FirebaseMessagingService : FirebaseMessagingService() {
 

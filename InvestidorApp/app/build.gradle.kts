@@ -56,13 +56,14 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
 
     // Jetpack Compose
-    implementation(platform("androidx.compose:compose-bom:2023.09.01"))
     implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material3:material3:1.2.1")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation ("com.google.firebase:firebase-messaging-ktx:24.1.0")
     implementation("com.google.firebase:firebase-database-ktx:20.3.0")
     debugImplementation("androidx.compose.ui:ui-tooling")
+    implementation(platform("androidx.compose:compose-bom:2024.05.00"))
+
 
     // Navigation Compose
     implementation("androidx.navigation:navigation-compose:2.7.2")
@@ -74,18 +75,16 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
 
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
