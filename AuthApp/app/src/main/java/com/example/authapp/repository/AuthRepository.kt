@@ -17,7 +17,7 @@ class AuthRepository(
             Exception(response.errorBody()?.string()))
     }
 
-    suspend fun login(email: String, password: String): Result<UserOut>{
+    suspend fun login(email: String, password: String): Result<String>{
         val response = api.login(LoginRequest(email, password))
         return if (response.isSuccessful){
             val token = response.body()!!.access_token
