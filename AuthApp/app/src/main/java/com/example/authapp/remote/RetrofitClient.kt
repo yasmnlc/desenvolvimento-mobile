@@ -17,7 +17,7 @@ object RetrofitClient {
 
     val instance: Retrofit by lazy{
         Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:8000/")
+            .baseUrl("https://my-api-login.onrender.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
