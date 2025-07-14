@@ -194,22 +194,3 @@ fun MessageBubble(msg: Message, isOwn: Boolean) {
         }
     }
 }
-
-@RequiresPermission(Manifest.permission.POST_NOTIFICATIONS)
-fun notifyNewMessage(context: Context, message: Message) {
-    val channelId = "chat_messages"
-    val notificationManager = NotificationManagerCompat.from(context)
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-        val channel = NotificationChannel(
-            channelId, "Mensagens", NotificationManager.IMPORTANCE_DEFAULT
-        )
-        notificationManager.createNotificationChannel(channel)
-    }
-    val notification = NotificationCompat.Builder(context, channelId)
-        .setContentTitle("Nova mensagem de ${message.senderName}")
-        .setContentText(message.text)
-        .setSmallIcon(R.drawable.ic_dialog_email)
-        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-        .build()
-    notificationManager.notify(message.id.hashCode(), notification)
-}

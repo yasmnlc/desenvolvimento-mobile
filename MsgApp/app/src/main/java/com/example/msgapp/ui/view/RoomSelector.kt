@@ -1,4 +1,4 @@
-package com.example.msgapp.ui.view
+package com.example.msgapp2.ui.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -39,5 +39,4 @@ fun RoomSelector(onRoomSelected: (String) -> Unit) {
         }
     }
 }
-
 
